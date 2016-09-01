@@ -16,6 +16,7 @@ class TextScreen: UIViewController {
         textView.text = TestHelpers.originalText
         view.addSubview(textField)
         textField.text = TestHelpers.originalText
+        textField.frame = CGRectMake(0, 0, 100, 30)
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("unused")
