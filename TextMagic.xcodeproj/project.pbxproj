@@ -24,11 +24,11 @@
 
 /* Begin PBXFileReference section */
 		709AC61C1D785F6E0027C629 /* TextMagic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TextMagic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		709AC61F1D785F6E0027C629 /* TextMagic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextMagic.h; sourceTree = "<group>"; };
-		709AC6211D785F6E0027C629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		709AC61F1D785F6E0027C629 /* TextMagic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TextMagic.h; path = Support/TextMagic.h; sourceTree = "<group>"; };
+		709AC6211D785F6E0027C629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Support/Info.plist; sourceTree = "<group>"; };
 		709AC6261D785F6E0027C629 /* TextMagicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextMagicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		709AC62B1D785F6E0027C629 /* TextMagicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMagicTests.swift; sourceTree = "<group>"; };
-		709AC62D1D785F6E0027C629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		709AC62B1D785F6E0027C629 /* TextMagicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextMagicTests.swift; path = Tests/TextMagicTests.swift; sourceTree = "<group>"; };
+		709AC62D1D785F6E0027C629 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "Tests-Info.plist"; path = "Support/Tests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				709AC62B1D785F6E0027C629 /* TextMagicTests.swift */,
-				709AC62D1D785F6E0027C629 /* Info.plist */,
+				709AC62D1D785F6E0027C629 /* Tests-Info.plist */,
 			);
 			path = TextMagicTests;
 			sourceTree = "<group>";
@@ -314,7 +314,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = TextMagic/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Support/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -331,7 +331,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = TextMagic/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Support/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -344,7 +344,7 @@
 		709AC6341D785F6E0027C629 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = TextMagicTests/Info.plist;
+				INFOPLIST_FILE = "Support/Tests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = design.bsn.TextMagicTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -354,7 +354,7 @@
 		709AC6351D785F6E0027C629 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = TextMagicTests/Info.plist;
+				INFOPLIST_FILE = "Support/Tests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = design.bsn.TextMagicTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -380,6 +380,7 @@
 				709AC6321D785F6E0027C629 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		709AC6331D785F6E0027C629 /* Build configuration list for PBXNativeTarget "TextMagicTests" */ = {
 			isa = XCConfigurationList;
@@ -388,6 +389,7 @@
 				709AC6351D785F6E0027C629 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
