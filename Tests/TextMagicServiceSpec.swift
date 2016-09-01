@@ -1,15 +1,14 @@
-//
-//  TextMagicTests.swift
-//  TextMagicTests
-//
-//  Created by Ben Norris on 9/1/16.
-//  Copyright © 2016 BSN Design. All rights reserved.
-//
+/*
+ |  _   ____   ____   _
+ | ⎛ |‾|  ⚈ |-| ⚈  |‾| ⎞
+ | ⎝ |  ‾‾‾‾| |‾‾‾‾  | ⎠
+ |  ‾        ‾        ‾
+ */
 
 import XCTest
 @testable import TextMagic
 
-class TextMagicTests: XCTestCase {
+class TextMagicServiceSpec: XCTestCase {
     
     override func setUp() {
         super.setUp()

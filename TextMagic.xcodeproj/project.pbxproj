@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		709AC6271D785F6E0027C629 /* TextMagic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 709AC61C1D785F6E0027C629 /* TextMagic.framework */; };
-		709AC62C1D785F6E0027C629 /* TextMagicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709AC62B1D785F6E0027C629 /* TextMagicTests.swift */; };
+		709AC62C1D785F6E0027C629 /* TextMagicServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709AC62B1D785F6E0027C629 /* TextMagicServiceSpec.swift */; };
 		709AC6371D7861310027C629 /* Diff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 709AC6361D7861310027C629 /* Diff.framework */; };
 		709AC6391D7862B30027C629 /* TextMagic.h in Headers */ = {isa = PBXBuildFile; fileRef = 709AC61F1D785F6E0027C629 /* TextMagic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		709AC63E1D7863620027C629 /* TextMagicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709AC63D1D7863620027C629 /* TextMagicService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,9 +29,10 @@
 		709AC61F1D785F6E0027C629 /* TextMagic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TextMagic.h; path = Support/TextMagic.h; sourceTree = "<group>"; };
 		709AC6211D785F6E0027C629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Support/Info.plist; sourceTree = "<group>"; };
 		709AC6261D785F6E0027C629 /* TextMagicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextMagicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		709AC62B1D785F6E0027C629 /* TextMagicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextMagicTests.swift; path = Tests/TextMagicTests.swift; sourceTree = "<group>"; };
+		709AC62B1D785F6E0027C629 /* TextMagicServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextMagicServiceSpec.swift; path = Tests/TextMagicServiceSpec.swift; sourceTree = "<group>"; };
 		709AC62D1D785F6E0027C629 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Tests-Info.plist"; path = "Support/Tests-Info.plist"; sourceTree = SOURCE_ROOT; };
 		709AC6361D7861310027C629 /* Diff.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Diff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		709AC63D1D7863620027C629 /* TextMagicService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextMagicService.swift; path = Sources/TextMagicService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		709AC63A1D7862EA0027C629 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				709AC63D1D7863620027C629 /* TextMagicService.swift */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -91,7 +94,7 @@
 		709AC63B1D7862F00027C629 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				709AC62B1D785F6E0027C629 /* TextMagicTests.swift */,
+				709AC62B1D785F6E0027C629 /* TextMagicServiceSpec.swift */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				709AC63E1D7863620027C629 /* TextMagicService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				709AC62C1D785F6E0027C629 /* TextMagicTests.swift in Sources */,
+				709AC62C1D785F6E0027C629 /* TextMagicServiceSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +334,7 @@
 		709AC6311D785F6E0027C629 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -342,12 +347,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = design.bsn.TextMagic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		709AC6321D785F6E0027C629 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
