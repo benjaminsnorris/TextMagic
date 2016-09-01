@@ -10,6 +10,8 @@ import Diff
 
 public struct TextMagicService {
     
+    public init() { }
+    
     /**
      Updates text in `textInput` while preserving cursor position
      and selected text range.
