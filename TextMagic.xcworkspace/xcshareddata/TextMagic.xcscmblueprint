@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4BB94E4D0B167BDF8E2B95EBD0130CB5E81B2851",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "268AC9DFDE1BE382D3410651EB4DFFF57F23212A" : 0,
+    "4BB94E4D0B167BDF8E2B95EBD0130CB5E81B2851" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C0AC398C-151D-4B42-8AE9-23DA55878D11",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "268AC9DFDE1BE382D3410651EB4DFFF57F23212A" : "TextMagic\/Carthage\/Checkouts\/diff\/",
+    "4BB94E4D0B167BDF8E2B95EBD0130CB5E81B2851" : "TextMagic\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TextMagic",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TextMagic.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/soffes\/diff.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "268AC9DFDE1BE382D3410651EB4DFFF57F23212A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/benjaminsnorris\/TextMagic.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4BB94E4D0B167BDF8E2B95EBD0130CB5E81B2851"
+    }
+  ]
+}
