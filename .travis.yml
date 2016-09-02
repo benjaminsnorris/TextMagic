@@ -35,4 +35,4 @@ script:
     -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty -c
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash) -J "$PROJECT_NAME"
+  - bash <(curl -s https://codecov.io/bash) -J TextMagic
