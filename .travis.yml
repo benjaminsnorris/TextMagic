@@ -2,7 +2,6 @@ language: objective-c
 
 before_install:
   - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
-  - gem install slather
 
 env:
   global:
@@ -36,7 +35,7 @@ script:
     -configuration Debug
     GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES
     GCC_GENERATE_TEST_COVERAGE_FILES=YES
-    ONLY_ACTIVE_ARCH=NO
+    ONLY_ACTIVE_ARCH=YES
     test
     | xcpretty -c
 
