@@ -38,8 +38,8 @@ If you need to update text in a `UITextView` or `UITextField` while preserving c
 
 ## Plans
 - [ ] Adding tests for `UITextField`
-- [ ] Adding code coverage metrics
-- [ ] Adding automated build
+- [x] Adding code coverage metrics
+- [x] Adding automated build
 
 
 ## Integration
