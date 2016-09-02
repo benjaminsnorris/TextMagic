@@ -1,4 +1,4 @@
-language: swift
+language: objective-c
 
 before_install:
   - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
