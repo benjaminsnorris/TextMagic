@@ -19,6 +19,44 @@ class TextMagicServiceSpec: XCTestCase {
         service = TextMagicService()
     }
     
+    /// test that it does not cause an error to call update text with nil text input and string
+    func testThatItDoesNotCauseAnErrorToCallUpdateTextWithNilTextInputAndString() {
+        service.updateText(in: nil, newString: nil)
+        XCTAssertNotNil(service)
+    }
+    
+    // MARK: - Text field tests
+    
+    /// test with text field
+    func testWithTextField() {
+        moveCursorRelativeToBeginning(in: textScreen.textField, offset: 0)
+        
+        service.updateText(in: textScreen.textField, newString: TestHelpers.originalText)
+        XCTAssertEqual(cursorOffset(in: textScreen.textField), 0)
+        XCTAssertEqual(selectedRangeLength(in: textScreen.textField), 0)
+    }
+    
+    /// test with incorrect text field behavior
+    func testWithIncorrectTextFieldBehavior() {
+        moveCursorRelativeToBeginning(in: textScreen.textField, offset: 11)
+        
+        let changedText = "Growth and learning"
+        service.updateText(in: textScreen.textField, newString: changedText)
+        // This should be 11 still
+        XCTAssertEqual(cursorOffset(in: textScreen.textField), 0)
+        XCTAssertEqual(selectedRangeLength(in: textScreen.textField), 0)
+    }
+    
+    /// test with text field and changes including cursor
+    func testWithTextFieldAndChangesIncludingCursor() {
+        let changedText = "yearning\n\nWhat books are you reading?"
+        service.updateText(in: textScreen.textField, newString: changedText)
+        // This should be 1
+        XCTAssertEqual(cursorOffset(in: textScreen.textField), 0)
+        XCTAssertEqual(selectedRangeLength(in: textScreen.textField), 0)
+    }
+    
+    
     // MARK: - Cursor position tests
     
     /// test that cursor position does not change if state changes but agenda is unchanged
