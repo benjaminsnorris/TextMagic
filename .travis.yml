@@ -2,6 +2,7 @@ language: objective-c
 
 before_install:
   - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+  - gem install slather
 
 env:
   global:
@@ -40,4 +41,5 @@ script:
     | xcpretty -c
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash) -J "$PROJECT_NAME"
+  - slather
+  - bash <(curl -s https://codecov.io/bash) -J "$PROJECT_NAME" -f ./test_reports/cobertura.xml
