@@ -10,6 +10,7 @@ env:
     - PROJECT_NAME="TextMagic"
     - PROJECT_SUFFFIX=".xcodeproj"
     - FRAMEWORK_SCHEME="TextMagic"
+    - IOS_SDK=iphonesimulator9.3
 
 matrix:
   include:
