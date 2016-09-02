@@ -1,4 +1,4 @@
-language: objective-c
+language: swift
 
 before_install:
   - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
@@ -30,9 +30,14 @@ script:
   - xcodebuild
     -workspace "$PROJECT_NAME$WORKSPACE_SUFFFIX"
     -scheme "$SCHEME"
-    -sdk "$SDK" GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
+    -sdk "$SDK"
     -destination "$DESTINATION"
-    -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty -c
+    -configuration Debug
+    GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES
+    GCC_GENERATE_TEST_COVERAGE_FILES=YES
+    ONLY_ACTIVE_ARCH=NO
+    test
+    | xcpretty -c
 
 after_success:
   - bash <(curl -s https://codecov.io/bash) -J "$PROJECT_NAME"
