@@ -1,0 +1,7 @@
+# .slather.yml
+
+coverage_service: cobertura_xml
+xcodeproj: ./TextMagic.xcodeproj
+workspace: ./TextMagic.xcworkspace
+scheme: TextMagic
+output_directory: ./test_reports
