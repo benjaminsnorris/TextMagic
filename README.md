@@ -3,8 +3,8 @@
 [![GitHub license](https://img.shields.io/github/license/benjaminsnorris/TextMagic.svg)](/LICENSE)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-brightgreen.svg)](https://github.com/Carthage/Carthage)
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift_Package_Manager-compatible-brightgreen.svg)](https://swift.org/package-manager)
-[![Build Status](https://travis-ci.org/benjaminsnorris/TextMagic.svg?branch=master)](https://travis-ci.org/benjaminsnorris/TextMagic)
-[![codecov](https://codecov.io/gh/benjaminsnorris/TextMagic/branch/master/graph/badge.svg)](https://codecov.io/gh/benjaminsnorris/TextMagic)
+[![Build Status](https://img.shields.io/travis/benjaminsnorris/TextMagic.svg)](https://travis-ci.org/benjaminsnorris/TextMagic)
+[![codecov](https://img.shields.io/codecov/c/github/benjaminsnorris/TextMagic.svg)](https://codecov.io/gh/benjaminsnorris/TextMagic)
 
 
 A simple library to make working with text in iOS easier. Currently, the library offers support for updating text in `UITextView` or `UITextField` without losing cursor position and text selection.
