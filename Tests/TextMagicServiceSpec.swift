@@ -372,19 +372,19 @@ private extension TextMagicServiceSpec {
 
 private extension TextMagicServiceSpec {
     
-    private func cursorOffset(in textInput: UITextInput) -> Int {
+    func cursorOffset(in textInput: UITextInput) -> Int {
         guard let selectedRange = textInput.selectedTextRange else { return 0 }
-        return textInput.offsetFromPosition(textInput.beginningOfDocument, toPosition: selectedRange.start)
+        return textInput.offset(from: textInput.beginningOfDocument, to: selectedRange.start)
     }
     
-    private func selectedRangeLength(in textInput: UITextInput) -> Int {
+    func selectedRangeLength(in textInput: UITextInput) -> Int {
         guard let selectedRange = textInput.selectedTextRange else { return 0 }
-        return textInput.offsetFromPosition(textInput.beginningOfDocument, toPosition: selectedRange.end) - cursorOffset(in: textInput)
+        return textInput.offset(from: textInput.beginningOfDocument, to: selectedRange.end) - cursorOffset(in: textInput)
     }
     
-    private func moveCursorRelativeToBeginning(in textInput: UITextInput, offset: Int, length: Int = 0) {
-        guard let startPosition = textInput.positionFromPosition(textInput.beginningOfDocument, offset: offset), endPosition = textInput.positionFromPosition(startPosition, offset: length) else { return }
-        textInput.selectedTextRange = textInput.textRangeFromPosition(startPosition, toPosition: endPosition)
+    func moveCursorRelativeToBeginning(in textInput: UITextInput, offset: Int, length: Int = 0) {
+        guard let startPosition = textInput.position(from: textInput.beginningOfDocument, offset: offset), let endPosition = textInput.position(from: startPosition, offset: length) else { return }
+        textInput.selectedTextRange = textInput.textRange(from: startPosition, to: endPosition)
     }
 
 }

@@ -29,22 +29,22 @@ public struct TextMagicService {
     public func updateText(in textInput: UITextInput?, newString: String?) {
         guard let textInput = textInput else { return }
         let oldText: String
-        if let textField = textInput as? UITextField, text = textField.text {
+        if let textField = textInput as? UITextField, let text = textField.text {
             oldText = text
-        } else if let textView = textInput as? UITextView, text = textView.text {
+        } else if let textView = textInput as? UITextView, let text = textView.text {
             oldText = text
         } else {
             return
         }
-        guard let newString = newString, (diffRange, changedText) = diff(oldText, newString), selectedRange = textInput.selectedTextRange else { return }
+        guard let newString = newString, let (diffRange, changedText) = diff(oldText, newString), let selectedRange = textInput.selectedTextRange else { return }
         if let textField = textInput as? UITextField {
             textField.text = newString
         } else if let textView = textInput as? UITextView {
             textView.text = newString
         }
         
-        let cursorOffset = textInput.offsetFromPosition(textInput.beginningOfDocument, toPosition: selectedRange.start)
-        let selectedEndOffset = textInput.offsetFromPosition(textInput.beginningOfDocument, toPosition: selectedRange.end)
+        let cursorOffset = textInput.offset(from: textInput.beginningOfDocument, to: selectedRange.start)
+        let selectedEndOffset = textInput.offset(from: textInput.beginningOfDocument, to: selectedRange.end)
         let selectedRangeLength = selectedEndOffset - cursorOffset
         
         if selectedEndOffset < diffRange.startIndex {
@@ -73,9 +73,9 @@ public struct TextMagicService {
 
 private extension TextMagicService {
     
-    private func moveCursorRelativeToBeginning(in textInput: UITextInput, offset: Int, rangeLength: Int = 0) {
-        guard let startPosition = textInput.positionFromPosition(textInput.beginningOfDocument, offset: offset), endPosition = textInput.positionFromPosition(startPosition, offset: rangeLength) else { return }
-        textInput.selectedTextRange = textInput.textRangeFromPosition(startPosition, toPosition: endPosition)
+    func moveCursorRelativeToBeginning(in textInput: UITextInput, offset: Int, rangeLength: Int = 0) {
+        guard let startPosition = textInput.position(from: textInput.beginningOfDocument, offset: offset), let endPosition = textInput.position(from: startPosition, offset: rangeLength) else { return }
+        textInput.selectedTextRange = textInput.textRange(from: startPosition, to: endPosition)
     }
     
 }
