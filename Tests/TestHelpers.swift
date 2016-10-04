@@ -1,7 +1,7 @@
 /*
  |  _   ____   ____   _
- | ⎛ |‾|  ⚈ |-| ⚈  |‾| ⎞
- | ⎝ |  ‾‾‾‾| |‾‾‾‾  | ⎠
+ | | |‾|  ⚈ |-| ⚈  |‾| |
+ | | |  ‾‾‾‾| |‾‾‾‾  | |
  |  ‾        ‾        ‾
  */
 
@@ -16,7 +16,7 @@ class TextScreen: UIViewController {
         textView.text = TestHelpers.originalText
         view.addSubview(textField)
         textField.text = TestHelpers.originalText
-        textField.frame = CGRectMake(0, 0, 100, 30)
+        textField.frame = CGRect(x: 0, y: 0, width: 100, height: 30)
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("unused")
