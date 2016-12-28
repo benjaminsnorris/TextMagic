@@ -1,3 +1,3 @@
 [submodule "Carthage/Checkouts/Diff"]
 	path = Carthage/Checkouts/Diff
-	url = https://github.com/soffes/Diff.git
+	url = https://github.com/benjaminsnorris/Diff.git
